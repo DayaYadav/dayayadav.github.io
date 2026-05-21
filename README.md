@@ -4,12 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daya Yadav- Technical Lead</title>
     <style>
-  /* ============================================
-   PORTFOLIO - LIGHT CREAM THEME
-   Colors: Cream, Warm Gold, Deep Brown, Navy
-   ============================================ */
-
-* {
+ {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
