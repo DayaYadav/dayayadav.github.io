@@ -228,7 +228,7 @@
     
     <!-- Hero Section -->
     <section class="hero">
-        <h2>Senior Mobile Developer</h2>
+        <h2>Technical Lead</h2>
         <p>14 Years Building Exceptional Mobile Apps | Android | React Native | Kotlin</p>
         <a href="#contact" class="cta-button">Get In Touch</a>
     </section>
@@ -348,7 +348,7 @@
                 <a href="mailto:daya20oct@gmail.com" style="background: #667eea; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; display: inline-block; font-weight: bold;">Send Me an Email</a>
             </p>
             <p>
-                <a href="www.linkedin.com/in/daya-yadav-403a122b">LinkedIn</a> | 
+                <a href="https://www.linkedin.com/in/daya-yadav-403a122b">LinkedIn</a> | 
                 <a href="https://github.com/DayaYadav/LBG/tree/dev/demo6Feb">GitHub</a> 
             </p>
         </div>
