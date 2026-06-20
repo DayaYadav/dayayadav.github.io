@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daya Yadav — Senior Mobile Engineer & Tech Lead</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Inter',sans-serif;background:#0d0d0d;color:#f0ede8}
+        .port{max-width:780px;margin:0 auto;padding:0 1.5rem 4rem}
+        nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;border-bottom:0.5px solid #2a2a2a;margin-bottom:0}
+        .logo{font-size:14px;font-weight:500;letter-spacing:0.08em;color:#a0998e;text-transform:uppercase}
+        .nav-links{display:flex;gap:2rem}
+        .nav-links a{font-size:13px;color:#a0998e;text-decoration:none;letter-spacing:0.04em}
+        .nav-links a:hover{color:#f0ede8}
+        .hero{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;padding:4rem 0 3rem}
+        .hero-text h1{font-size:2.4rem;font-weight:300;line-height:1.15;letter-spacing:-0.02em;color:#f0ede8;margin-bottom:1rem}
+        .hero-text h1 span{color:#c9a96e;font-weight:400}
+        .hero-text p{font-size:14px;line-height:1.8;color:#a0998e;margin-bottom:1.5rem;max-width:340px}
+        .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem}
+        .badge{font-size:11px;padding:4px 12px;border:0.5px solid #2a2a2a;border-radius:20px;color:#a0998e;letter-spacing:0.04em}
+        .cta-row{display:flex;gap:1rem;align-items:center}
+        .cta-btn{font-size:13px;padding:10px 22px;background:#c9a96e;color:#0d0d0d;border:none;border-radius:4px;cursor:pointer;font-weight:500;letter-spacing:0.02em}
+        .cta-link{font-size:13px;color:#a0998e;text-decoration:none;border-bottom:0.5px solid #3a3a3a}
+        .download-cv{color:#c9a96e;border-bottom:0.5px solid #c9a96e55}
+        .download-cv:hover{color:#e0c08a}
+        .hero-photo{position:relative;display:flex;justify-content:flex-end}
+        .photo-frame{width:260px;height:310px;border-radius:8px;overflow:hidden;border:0.5px solid #2a2a2a;position:relative}
+        .photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(15%)}
+        .photo-tag{position:absolute;bottom:12px;left:12px;background:rgba(13,13,13,0.85);border:0.5px solid #2a2a2a;border-radius:4px;padding:6px 10px}
+        .photo-tag p{font-size:11px;color:#a0998e;letter-spacing:0.04em}
+        .photo-tag strong{font-size:12px;color:#f0ede8;font-weight:500;display:block}
+        .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#1a1a1a;border:0.5px solid #1a1a1a;border-radius:8px;overflow:hidden;margin-bottom:3.5rem}
+        .stat{background:#111;padding:1.25rem 1rem;text-align:center}
+        .stat-num{font-size:1.8rem;font-weight:300;color:#c9a96e;letter-spacing:-0.02em}
+        .stat-label{font-size:11px;color:#666;margin-top:4px;letter-spacing:0.04em;text-transform:uppercase}
+        .section{margin-bottom:3.5rem}
+        .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem}
+        .section-header h2{font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#a0998e}
+        .section-line{flex:1;height:0.5px;background:#1e1e1e}
+        .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+        .skill-card{background:#111;border:0.5px solid #1e1e1e;border-radius:8px;padding:1rem 1.25rem}
+        .skill-card h3{font-size:12px;font-weight:500;color:#c9a96e;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px}
+        .skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+        .skill-tag{font-size:11px;padding:3px 10px;background:#1a1a1a;border-radius:20px;color:#888;letter-spacing:0.02em}
+        .exp-item{display:grid;grid-template-columns:120px 1fr;gap:1.5rem;padding:1.5rem 0;border-bottom:0.5px solid #1a1a1a}
+        .exp-item:last-child{border-bottom:none}
+        .exp-date{font-size:11px;color:#555;letter-spacing:0.04em;padding-top:2px;line-height:1.6}
+        .exp-right h3{font-size:15px;font-weight:500;color:#f0ede8;margin-bottom:2px}
+        .exp-right h4{font-size:12px;color:#c9a96e;margin-bottom:10px;font-weight:400}
+        .exp-right p{font-size:13px;color:#888;line-height:1.7}
+        .exp-bullets{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+        .exp-bullet{font-size:12px;color:#777;line-height:1.6;padding-left:12px;position:relative}
+        .exp-bullet::before{content:'—';position:absolute;left:0;color:#333}
+        .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        .proj-card{background:#111;border:0.5px solid #1e1e1e;border-radius:8px;padding:1.25rem;position:relative;overflow:hidden}
+        .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#c9a96e,#8b6a3e)}
+        .proj-num{font-size:11px;color:#333;font-weight:500;margin-bottom:8px}
+        .proj-card h3{font-size:14px;font-weight:500;color:#f0ede8;margin-bottom:6px}
+        .proj-card p{font-size:12px;color:#777;line-height:1.6;margin-bottom:12px}
+        .proj-tech{display:flex;flex-wrap:wrap;gap:5px}
+        .proj-tech span{font-size:10px;padding:2px 8px;background:#1a1a1a;border-radius:20px;color:#666}
+        .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        .contact-item{display:flex;align-items:center;gap:12px;background:#111;border:0.5px solid #1e1e1e;border-radius:8px;padding:1rem 1.25rem;text-decoration:none}
+        .contact-item:hover{border-color:#2a2a2a;background:#161616}
+        .contact-icon{width:36px;height:36px;border-radius:6px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .contact-icon i{font-size:18px;color:#c9a96e}
+        .contact-label{font-size:11px;color:#555;letter-spacing:0.04em;margin-bottom:2px}
+        .contact-val{font-size:13px;color:#d0ccc5}
+        footer{text-align:center;padding:2rem 0 0;border-top:0.5px solid #1a1a1a;font-size:12px;color:#444;letter-spacing:0.04em}
+
+        .proj-list{display:flex;flex-direction:column;gap:16px}
+        .proj-card-full{background:#111;border:0.5px solid #1e1e1e;border-radius:8px;padding:1.4rem 1.5rem;position:relative;overflow:hidden}
+        .proj-card-full::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#c9a96e,#8b6a3e)}
+        .proj-head{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem}
+        .proj-head .proj-num{font-size:11px;color:#333;font-weight:500;padding-top:3px;flex-shrink:0}
+        .proj-head h3{font-size:14px;font-weight:500;color:#f0ede8;margin:0}
+        .proj-bullets{list-style:none;display:flex;flex-direction:column;gap:7px;padding:0}
+        .proj-bullets li{font-size:12px;color:#777;line-height:1.65;padding-left:14px;position:relative}
+        .proj-bullets li::before{content:'—';position:absolute;left:0;color:#333}
+    </style>
+</head>
+<body>
+<div class="port">
+    <nav>
+        <span class="logo">Daya Yadav</span>
+        <div class="nav-links">
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Senior Mobile<br>Engineer &amp;<br><span>Tech Lead</span></h1>
+            <p>17 years in IT, 14 years specializing in Android. Building enterprise-grade apps with 99.9% crash-free sessions across Kotlin, Jetpack Compose, and React Native.</p>
+            <div class="hero-badges">
+                <span class="badge">Android</span>
+                <span class="badge">Kotlin</span>
+                <span class="badge">Jetpack Compose</span>
+                <span class="badge">React Native</span>
+                <span class="badge">KMP</span>
+                <span class="badge">Clean Architecture</span>
+            </div>
+            <div class="cta-row">
+                <button class="cta-btn" onclick="document.getElementById('contact-section').scrollIntoView({behavior:'smooth'})">Get in touch</button>
+                <a class="cta-link" href="https://linkedin.com/in/daya-yadav-mobile" target="_blank">LinkedIn ↗</a>
+                <a class="cta-link download-cv" href="https://drive.google.com/file/d/1V4aJEzzcAwmp12zwEaNxGU3o6yhLtrAm/view?usp=drive_link" download="Daya_Yadav_CV.docx">Download CV ↓</a>
+            </div>
+        </div>
+        <div class="hero-photo">
+            <div class="photo-frame">
+                <img src="data:image/jpeg;base64,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" alt="Daya Yadav" />
+                <div class="photo-tag">
+                    <p>Based in</p>
+                    <strong>Gurugram, India</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat"><div class="stat-num">17</div><div class="stat-label">Years IT Exp</div></div>
+        <div class="stat"><div class="stat-num">14</div><div class="stat-label">Years Android</div></div>
+        <div class="stat"><div class="stat-num">6+</div><div class="stat-label">Engineers Led</div></div>
+        <div class="stat"><div class="stat-num">99.9%</div><div class="stat-label">Crash-free Rate</div></div>
+    </div>
+
+    <div class="section" id="skills">
+        <div class="section-header"><h2>Core Skills</h2><div class="section-line"></div></div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Android &amp; Mobile</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Kotlin</span><span class="skill-tag">Java</span>
+                    <span class="skill-tag">Jetpack Compose</span><span class="skill-tag">Android SDK</span>
+                    <span class="skill-tag">React Native</span><span class="skill-tag">KMP</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Architecture</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">MVVM</span><span class="skill-tag">MVI</span>
+                    <span class="skill-tag">Clean Architecture</span><span class="skill-tag">Multi-Module</span>
+                    <span class="skill-tag">Coroutines</span><span class="skill-tag">Flow</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Libraries &amp; Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Hilt / Dagger2</span><span class="skill-tag">Room</span>
+                    <span class="skill-tag">Retrofit</span><span class="skill-tag">WorkManager</span>
+                    <span class="skill-tag">Firebase</span><span class="skill-tag">Crashlytics</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>DevOps &amp; Cloud</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">GitHub Actions</span><span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">GCP</span><span class="skill-tag">AWS</span>
+                    <span class="skill-tag">GitHub Copilot</span><span class="skill-tag">Firebase Dist.</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Testing</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">JUnit</span><span class="skill-tag">Mockito</span>
+                    <span class="skill-tag">Espresso</span><span class="skill-tag">Robotium</span>
+                    <span class="skill-tag">Integration Testing</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Leadership</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Team Lead (6+)</span><span class="skill-tag">Agile/Scrum</span>
+                    <span class="skill-tag">Code Review</span><span class="skill-tag">Mentoring</span>
+                    <span class="skill-tag">System Design</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="experience">
+        <div class="section-header"><h2>Experience</h2><div class="section-line"></div></div>
+        <div class="exp-item">
+            <div class="exp-date">Sep 2018<br>—<br>Apr 2026<br><br><span style="color:#c9a96e;font-size:10px">7.5 yrs</span></div>
+            <div class="exp-right">
+                <h3>Tech Lead — Android &amp; Mobile</h3>
+                <h4>Wipro Technology</h4>
+                <p>Led enterprise Android delivery for 1M+ user apps across e-commerce, telecom, and automotive domains.</p>
+                <div class="exp-bullets">
+                    <div class="exp-bullet">Architected multi-module MVVM app for Office Depot (USA); 99.9% crash-free over 24 months</div>
+                    <div class="exp-bullet">Led Java→Kotlin migration for Grameenphone (80M+ subscribers); 30% code reduction</div>
+                    <div class="exp-bullet">React Native New Architecture with 40% reduced JS-to-native bridge latency</div>
+                    <div class="exp-bullet">Offline-first architecture for 2G connectivity in Bangladesh (300KB/min optimized)</div>
+                    <div class="exp-bullet">Built US news station weather app from scratch — Kotlin, MVVM, Jetpack Compose, real-time multi-station data via Coroutines &amp; StateFlow</div>
+                    <div class="exp-bullet">Reduced release cycles by 20% via Agile/Scrum process improvements</div>
+                </div>
+            </div>
+        </div>
+        <div class="exp-item">
+            <div class="exp-date">Dec 2015<br>—<br>Sep 2018<br><br><span style="color:#c9a96e;font-size:10px">3 yrs</span></div>
+            <div class="exp-right">
+                <h3>Senior Android Developer</h3>
+                <h4>NIIT Technologies</h4>
+                <p>Designed and shipped 4+ enterprise apps for insurance and travel domains to 50,000+ users.</p>
+                <div class="exp-bullets">
+                    <div class="exp-bullet">Led team of 4 Android developers; 30% defect escape rate reduction</div>
+                    <div class="exp-bullet">Implemented MVVM &amp; Clean Architecture in legacy codebases</div>
+                </div>
+            </div>
+        </div>
+        <div class="exp-item">
+            <div class="exp-date">Feb 2015<br>—<br>Dec 2015</div>
+            <div class="exp-right">
+                <h3>Associate Consultant</h3>
+                <h4>Infogain</h4>
+                <p>Developed Android features for retail and logistics clients; collaborated with US-based teams.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="projects">
+        <div class="section-header"><h2>Featured Projects</h2><div class="section-line"></div></div>
+        <div class="proj-list">
+
+            <div class="proj-card-full">
+                <div class="proj-head">
+                    <span class="proj-num">01</span>
+                    <div>
+                        <h3>Grameenphone Telecom App</h3>
+                        <div class="proj-tech" style="margin-top:6px"><span>Android</span><span>Kotlin</span><span>Coroutines</span><span>Flow</span><span>MVVM</span><span>Room</span><span>WorkManager</span></div>
+                    </div>
+                </div>
+                <ul class="proj-bullets">
+                    <li>Led Java-to-Kotlin migration for 80M+ subscriber telecom app; achieved 30% code reduction and 90% drop in NullPointerExceptions.</li>
+                    <li>Replaced legacy async threads with Kotlin Coroutines/Flow for real-time telecom features; improved team velocity by 25%.</li>
+                    <li>Designed offline-first architecture using Room + WorkManager; enabled reliable operation on 2G / 300 KB/min bandwidth in Bangladesh.</li>
+                </ul>
+            </div>
+
+            <div class="proj-card-full">
+                <div class="proj-head">
+                    <span class="proj-num">02</span>
+                    <div>
+                        <h3>Hyundai Dealer Management App</h3>
+                        <div class="proj-tech" style="margin-top:6px"><span>Android</span><span>Kotlin</span><span>Firebase</span><span>MVVM</span><span>Mockito</span><span>Robotium</span></div>
+                    </div>
+                </div>
+                <ul class="proj-bullets">
+                    <li>Built dealer management application for 500+ sales consultants with real-time lead pipeline and activity tracking via Firebase Realtime Database.</li>
+                    <li>Standardised Mockito + Robotium testing frameworks; reduced production bugs by 30%; enabled continuous reliable deployments.</li>
+                    <li>Drove Agile/Scrum process improvements reducing release cycles by 20%; mentored 6+ engineers across Android, React Native, and QA.</li>
+                    <li>Optimised app performance through memory profiling, R8/ProGuard configuration, and Baseline Profiles; ensured smooth experience on low-RAM (2 GB) devices.</li>
+                </ul>
+            </div>
+
+            <div class="proj-card-full">
+                <div class="proj-head">
+                    <span class="proj-num">03</span>
+                    <div>
+                        <h3>US News Station Weather App</h3>
+                        <div class="proj-tech" style="margin-top:6px"><span>Android</span><span>Kotlin</span><span>Jetpack Compose</span><span>MVVM</span><span>Clean Architecture</span><span>Coroutines</span><span>StateFlow</span></div>
+                    </div>
+                </div>
+                <ul class="proj-bullets">
+                    <li>Architected and built a production Android application from scratch for a US-based news station using Kotlin, MVVM, and Clean Architecture, delivering a fully reactive Jetpack Compose UI.</li>
+                    <li>Designed real-time weather data aggregation pipeline across multiple broadcast stations via REST APIs, with Kotlin Coroutines, Flow, and StateFlow driving live on-screen updates and condition management.</li>
+                </ul>
+            </div>
+
+            <div class="proj-card-full">
+                <div class="proj-head">
+                    <span class="proj-num">04</span>
+                    <div>
+                        <h3>Office Depot E-Commerce App</h3>
+                        <div class="proj-tech" style="margin-top:6px"><span>React Native</span><span>iOS Swift</span><span>Android Kotlin</span><span>Redux</span><span>JSI</span><span>TurboModules</span><span>PayPal</span></div>
+                    </div>
+                </div>
+                <ul class="proj-bullets">
+                    <li>Architected and delivered a cross-platform e-commerce app using React Native New Architecture (JSI/Fabric/TurboModules) targeting both iOS and Android for 1M+ users — primary React Native engagement (3 years).</li>
+                    <li>Owned iOS integration end-to-end: configured Xcode build schemes and provisioning profiles, authored Swift native modules for payment and biometric authentication bridged via JSI, and owned App Store submission pipeline throughout the project lifecycle.</li>
+                    <li>Integrated PayPal gateway with platform-specific native modules (Swift on iOS, Kotlin on Android); reduced JS-to-native bridge latency by 40% via TurboModule migration.</li>
+                    <li>Implemented Redux + Javascript state architecture with strict type safety; reduced runtime type errors by 60% and cut code review cycles by 25%.</li>
+                    <li>Achieved 99.9% crash-free rate across 24 months on both iOS and Android; reduced build time by 35% through multi-module modularisation.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section" id="contact-section">
+        <div class="section-header"><h2>Contact</h2><div class="section-line"></div></div>
+        <div class="contact-grid">
+            <a class="contact-item" href="tel:+918467984841">
+                <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></svg></div>
+                <div><div class="contact-label">Phone</div><div class="contact-val">+91-8467984841</div></div>
+            </a>
+            <a class="contact-item" href="mailto:daya20oct@gmail.com">
+                <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,5 12,13 21,5"/></svg></div>
+                <div><div class="contact-label">Email</div><div class="contact-val">daya20oct@gmail.com</div></div>
+            </a>
+            <a class="contact-item" href="https://linkedin.com/in/daya-yadav-mobile" target="_blank">
+                <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M8 11l0 5"/><path d="M8 8l0 .01"/><path d="M12 16l0 -5"/><path d="M16 16v-3a2 2 0 0 0 -4 0"/></svg></div>
+                <div><div class="contact-label">LinkedIn</div><div class="contact-val">linkedin.com/in/daya-yadav-mobile</div></div>
+            </a>
+            <a class="contact-item" href="https://github.com/DayaYadav/kotlin" target="_blank">
+                <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/></svg></div>
+                <div><div class="contact-label">GitHub</div><div class="contact-val">github.com/DayaYadav/kotlin</div></div>
+            </a>
+        </div>
+    </div>
+
+    <footer>© 2026 Daya Yadav · Senior Mobile Engineer · Gurugram, India · Available Immediately</footer>
+</div>
+</body>
+</html>
